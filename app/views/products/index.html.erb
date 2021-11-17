@@ -1,0 +1,57 @@
+
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="card">
+  
+  <h5 class="card-header">Product list</h5>
+    <div class="card-body">
+        <div class='mb-2'>
+          <%= link_to 'New Product', new_product_path, class:'btn btn-success float-end' %>
+          <%= search_form_for @q do |f| %>
+            <%= f.label :title_cont %>
+            <%= f.search_field :title_cont %>
+
+            <%= f.submit %>
+          <% end %>
+        </div>
+        <table class="table table-hover table-bordered" >
+          <thead>
+            <tr>
+              <th class='text-center'>Sku</th>
+              <th class='text-center'>Title</th>
+              <th class='text-center'>Price</th>
+              <th class='text-center'>Quantity</th>
+              <th class='text-center'>Image</th>
+              <th class='text-center' colspan="3">Choose</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @products.each do |product| %>
+              <tr>
+                <td class='text-center'><%= product.sku %></td>
+                <td ><%= product.title %></td>
+                <td class='text-center'><%= product.price %></td>
+                <td class='text-center'><%= product.quantity %></td>
+                <td class='text-center'>
+                  <div class='image-product'>
+                    <%= image_tag(product.image, style: 'width:100%')%>
+                  </div>
+                </td>
+                <td class='text-center'><%= link_to 'Show', product , class: 'btn btn-success'%></td>
+                <td class='text-center'><%= link_to 'Edit', edit_product_path(product) , class: 'btn btn-warning'%></td>
+                <td class='text-center'><%= link_to 'Destroy', product, class: 'btn btn-danger',method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+    <div class='mx-auto'>
+      <div class="digg_pagination">
+        <%= will_paginate @products  %>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+

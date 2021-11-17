@@ -1,0 +1,31 @@
+<div class='mx-4 mt-2'>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Sku:</strong>
+    <%= @product.sku %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @product.title %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= @product.quantity %>
+  </p>
+  <p>
+    <strong>Image:</strong>
+      <div class='image-product'>
+        <%= image_tag(@product.image, style: 'width:100%')%>
+      </div>
+  </p> 
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
