@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+    <%= link_to 'Back', products_path, class:'btn btn-danger mb-3' %>
+    <div class="card">
+    <h5 class="card-header">Category list</h5>
+        <div class="card-body">
+            <table class="table table-hover table-bordered" >
+                <thead>
+                    <tr>
+                        <th>Category's name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @categories.each do |category|%>
+                        <tr>
+                            <td><%=category.title%></td>
+                            <td><%=category.status == true ? :'Shown':'hiden' %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+        </div>
+    </div>
+</div>
