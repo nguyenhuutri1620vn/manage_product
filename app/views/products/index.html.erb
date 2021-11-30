@@ -1,8 +1,11 @@
 
 <div class="container">
-<p id="notice" class='text-danger'><%= notice %></p>
+<div class="alert alert-success" role="alert">
+  <%= notice %>
+</div>
   <div class="card">
-  <h5 class="card-header">Product list</h5>
+  <h5 class="card-header">Product list
+  <%= link_to "Register", new_user_path, class:'btn btn-dark float-end' %></h5>
     <div class="card-body">
         <div class='mb-4'>
           <%= link_to 'New Product', new_product_path, class:'btn btn-success float-end' %>
@@ -53,5 +56,4 @@
     </div>
   </div>
 </div>
-<br>
 

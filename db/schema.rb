@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_25_103325) do
+ActiveRecord::Schema.define(version: 2021_11_30_080833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_11_25_103325) do
     t.string "sku"
     t.string "title"
     t.string "price"
-    t.string "quantity"
+    t.string "quantity", default: "0"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "cateID", null: false
@@ -63,9 +63,18 @@ ActiveRecord::Schema.define(version: 2021_11_25_103325) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "title"
-    t.integer "quantity"
-    t.integer "product_id"
+    t.string "title", null: false
+    t.integer "quantity", null: false
+    t.integer "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "date_born"
+    t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
