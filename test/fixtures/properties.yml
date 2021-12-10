@@ -2,8 +2,15 @@
 
 one:
   title: MyString
-  quntity: 
+  quantity: 2
+  product_id: 3
 
 two:
   title: MyString
-  quntity: 
+  quantity: 5
+  product_id: 2
+
+three:
+  title: MyString
+  quantity: 1
+  product_id: 2

@@ -4,10 +4,13 @@ one:
   sku: MyString
   title: MyString
   price: MyString
-  quantity: MyString
-
+  quantity: 0
+  cateID: 0
 two:
   sku: MyString
   title: MyString
   price: MyString
-  quantity: MyString
+  quantity: 0
+  cateID: 0
+
+

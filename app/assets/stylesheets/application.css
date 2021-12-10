@@ -77,3 +77,211 @@
 *:first-child + html .digg_pagination {
     overflow: hidden; 
 }
+.header{
+    width: 100%;
+    height: 150px;
+    background: #5f6c81;
+}
+.header-title{
+    padding: 30px 30px 10px 10px;
+    width: 100%;
+    text-align:center;
+}
+.header-title-left{
+    float:left;
+    width:100px;
+}
+.header-title-right{
+    float:right;
+    width:100px;
+}
+.header-title-center{
+    display: inline-block;
+    text-align: center;
+    width:100px;
+}
+.title-header{
+    letter-spacing: 0.5cm;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.icon-header{
+    color: white;
+    font-size: 20px;
+}
+.header-menu span{
+    color: white;
+    margin-left: 60px;
+}
+.header-menu{
+    padding-top: 20px;
+}
+.banner-image{
+    width: 100%;
+    height: 400px;
+}
+.page{
+}
+.path-product{
+    padding: 30px 30px 30px 30px;
+    width: 100%;
+}
+.path-product-left{
+    float: left;
+}
+.path-product-left span{
+    font-size: 15px;
+}
+.path-product-right{
+    float: right;
+}
+.text-path{
+    color: #636363c0;
+}
+.card {
+    cursor: pointer
+}
+
+.weight {
+    margin-top: -65px;
+    transition: all 0.5s
+}
+
+.weight small {
+    color: #e2dede
+}
+
+.buttons {
+    padding: 10px;
+    background-color: #d6d4d44f;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 7px;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    color: #fff;
+    opacity: 0
+}
+
+.cart-button {
+    height: 48px
+}
+
+.cart-button:focus {
+    box-shadow: none
+}
+
+.cart {
+    position: relative;
+    height: 48px !important;
+    width: 50px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 11px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 1s ease-in-out;
+    overflow: hidden
+}
+
+.cart-button.clicked span.dot {
+    animation: item 0.3s ease-in forwards
+}
+
+@keyframes item {
+    0% {
+        opacity: 1;
+        top: 30%;
+        left: 30%
+    }
+
+    25% {
+        opacity: 1;
+        left: 26%;
+        top: 0%
+    }
+
+    50% {
+        opacity: 1;
+        left: 23%;
+        top: -22%
+    }
+
+    75% {
+        opacity: 1;
+        left: 19%;
+        top: -18%
+    }
+
+    100% {
+        opacity: 1;
+        left: 14%;
+        top: 28%
+    }
+}
+
+.card:hover .buttons {
+    opacity: 1
+}
+
+.card:hover .weight {
+    margin-top: 10px
+}
+
+.card:hover {
+    transform: scale(1.04);
+    z-index: 2;
+    overflow: hidden
+}
+.product-image{
+    width: 200px;
+}
+.paginate{
+    text-align: center;
+    margin-top: 50px;
+}
+.paginate>div>span{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.footer{
+    width: 100%;
+    height: 400px;
+    background: #5f6c81;
+    margin-top: 100px;
+}
+.row-footer{
+    padding: 75px;
+}
+.title-footer{
+    color: white;
+    font-size: 20px;
+}
+.text-footer{
+    color: #b8b8b8;
+}
+.footer-contact{
+    text-align: center;
+}
+.footer-contact i {
+    font-size: 20px;
+    color: white;
+    margin-left: 30px;
+}
